@@ -22,14 +22,6 @@ class Employee(models.Model):
 class Position(models.Model):
     position_name = models.CharField(max_length=200)
     position_desc = models.TextField()
-    salary_min = models.IntegerField(default=0)
-    salary_max = models.IntegerField(default=5000)
-
-    def clean(self, *args, **kwargs):
-        if self.salary_max < self.salary_min:
-            raise forms.ValidationError("Maximum salary should be greater than its minimum")
-
-        super().clean(*args, **kwargs)
 
     def save(self, *args, **kwargs):
         self.full_clean()
