@@ -23,7 +23,7 @@ class Position(models.Model):
     position_name = models.CharField(max_length=200)
     position_desc = models.TextField()
     salary_min = models.IntegerField(default=0)
-    salary_max = models.IntegerField(default=1)
+    salary_max = models.IntegerField(default=5000)
 
     def clean(self, *args, **kwargs):
         if self.salary_max < self.salary_min:
