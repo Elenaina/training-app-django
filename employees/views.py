@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import Employee, Position
-from rest_framewrk import viewsets
+from rest_framework import viewsets
 from .serializers import EmployeeSerializer, PositionSerializer
 # Create your views here.
 
