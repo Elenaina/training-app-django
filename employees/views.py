@@ -13,4 +13,3 @@ class PositionViewSet(viewsets.ModelViewSet):
 class EmployeeViewSet(viewsets.ModelViewSet):
     queryset = Employee.objects.all().order_by('surname')
     serializer_class = EmployeeSerializer
-    
