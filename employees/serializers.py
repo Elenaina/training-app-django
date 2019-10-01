@@ -11,4 +11,4 @@ class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
 class PositionSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Position
-        fields = ['position_name', 'position_desc']
+        fields = ['id', 'position_name', 'position_desc']
