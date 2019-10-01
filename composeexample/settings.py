@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'employees',
     'polls.apps.PollsConfig',
     'rest_framework',
+    'rest_framework.authtoken',
     'djoser'
 ]
 

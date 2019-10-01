@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Employee, Position, Friend
+from .models import Employee, Position
 
 
 class EmployeeSerializer(serializers.HyperlinkedModelSerializer):
@@ -12,13 +12,3 @@ class PositionSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Position
         fields = ['position_name', 'position_desc']
-
-
-class FriendSerializer(serializers.HyperlinkedModelSerializer):
-    owner = serializers.HiddenField(
-        default=serializers.CurrentUserDefault()
-    )
-
-    class Meta:
-        model = Friend
-        field = ('id', 'name')
